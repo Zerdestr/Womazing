@@ -1,0 +1,255 @@
+.header {
+  position: fixed;
+  z-index: 10;
+  padding: 51px 0;
+  width: 100%;
+  background-color: transparent;
+  transition:
+    background-color 0.1s ease-in-out,
+    box-shadow 0.1s ease-in-out,
+    padding 0.2s ease-in-out;
+
+  &--fixed {
+    padding: 34px 0;
+    background-color: $white;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.05);
+  }
+
+  @media (max-width: 991px) {
+    padding: 40px 0;
+  }
+
+  @media (max-width: 756px) {
+    padding: 30px 0;
+  }
+
+  @media (max-width: 567px) {
+    padding: 20px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+  }
+
+  &__logo {
+    max-width: 140px;
+    max-height: 25px;
+
+    @media (max-width: 756px) {
+      margin-right: auto;
+    }
+  }
+
+  &__nav {
+    @media (max-width: 756px) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      max-width: 100%;
+      background-color: rgba($color: $blue, $alpha: 0.95);
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 50px;
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out;
+      pointer-events: none;
+
+      &--active {
+        opacity: 1;
+        pointer-events: stroke;
+
+        .header__list {
+          right: 0;
+        }
+      }
+    }
+
+    @media (max-width: 567px) {
+      max-width: 100%;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 45px;
+    transition: right 0.2s ease-in-out;
+
+    @media (max-width: 991px) {
+      gap: 20px;
+    }
+
+    @media (max-width: 756px) {
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      right: -100%;
+      background-color: $white;
+      max-width: 300px;
+      width: 100%;
+      height: 100%;
+      padding: 70px 20px;
+    }
+  }
+
+  &__telephone-mobile {
+    display: none;
+
+    @media (max-width: 567px) {
+      display: block;
+
+      .header__telephone {
+        display: block;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 15px;
+    font-weight: 400;
+    transition: color 0.1s ease-in-out;
+
+    &:hover {
+      color: $blue-dark;
+    }
+
+    &.active {
+      color: $blue;
+      font-weight: 700;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    column-gap: 67px;
+
+    @media (max-width: 991px) {
+      column-gap: 20px;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+
+    @media (max-width: 991px) {
+      column-gap: 10px;
+    }
+  }
+
+  .callback-header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    max-width: 100%;
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    pointer-events: none;
+    background-color: rgba($color: $blue, $alpha: 0.95);
+
+    &--active {
+      pointer-events: stroke;
+      opacity: 1;
+    }
+
+    &__form {
+      background-color: $white;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      padding: 70px;
+      row-gap: 35px;
+      max-width: 490px;
+      width: 100%;
+    }
+
+    &__burger {
+      position: absolute;
+      right: 32px;
+      top: 32px;
+    }
+
+    &__title {
+      font-size: 25px;
+      text-align: center;
+    }
+
+    &__input {
+      padding-bottom: 16px;
+      border-bottom: 1px solid $dark;
+      outline: none;
+    }
+
+    &__button {
+      text-align: center;
+      width: 100%;
+      background-color: $blue;
+      padding: 22px 0;
+      color: $white;
+      transition: background-color 0.2s ease-in-out;
+
+      &:hover {
+        background-color: $blue-dark;
+      }
+    }
+  }
+
+  &__callback-icon {
+    font-size: 15px;
+    line-height: 1.4;
+    color: $blue;
+    width: 27px;
+    height: 27px;
+    transition:
+      color 0.2s ease-in-out,
+      background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: $blue;
+      color: $white;
+    }
+
+    @media (max-width: 756px) {
+      color: $white;
+    }
+  }
+
+  &__telephone {
+    font-size: 15px;
+
+    @media (max-width: 567px) {
+      display: none;
+    }
+  }
+
+  &__shopping-bags {
+    font-size: 24px;
+    transition: color 0.1s ease-in-out;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  &__burger {
+    display: none;
+
+    @media (max-width: 756px) {
+      display: block;
+    }
+  }
+}

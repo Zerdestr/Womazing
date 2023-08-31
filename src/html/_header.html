@@ -1,0 +1,87 @@
+<header class="header">
+  <div class="container">
+    <div class="header__wrapper">
+      <a class="header__logo logo" href="index.html">
+        <img src="@img/logo.svg" alt="Логотип">
+      </a>
+
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__item">
+            <a class="header__link @@home" @@homeLink>
+              Главная
+            </a>
+          </li>
+
+          <li class="header__item">
+            <a class="header__link @@store" @@storeLink>
+              Магазин
+            </a>
+          </li>
+
+          <li class="header__item">
+            <a class="header__link @@about" @@aboutLink>
+              О бренде
+            </a>
+          </li>
+
+          <li class="header__item">
+            <a class="header__link @@contact" @@contactLink>
+              Контакты
+            </a>
+          </li>
+
+          <li class="header__item header__telephone-mobile">
+            <a class="header__telephone " href="tel:+74958235412">
+              <span class="header__icon-telephone icon-telephone"></span>
+              +7 (495) 823-54-12
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header__right">
+        <div class="header__contacts">
+
+          <div class="header__callback callback-header">
+          
+            <form class="callback-header__form" action="#">
+
+              <div class="callback-header__burger burger burger--active">
+                <span class="burger__line"></span>
+              </div>
+
+              <h3 class="callback-header__title">
+                Заказать обратный звонок
+              </h3>
+
+              <label for="callbackHeaderName"></label>
+              <input class="callback-header__input" type="text" id="callbackHeaderName" placeholder="Имя" required>
+
+              <label for="callbackHeaderName"></label>
+              <input class="callback-header__input" type="email" id="callbackHeaderMail" placeholder="E-mail" required>
+
+              <label for="callbackHeaderName"></label>
+              <input class="callback-header__input" type="tel" id="callbackHeaderPhone" placeholder="Телефон" required>
+
+              <button class="callback-header__button" type="submit">Заказать звонок</button>
+            </form>
+
+          </div>
+
+          <button class="header__callback-icon icon-telephone" type="button"></button>
+
+          <a class="header__telephone" href="tel:+74958235412">
+            +7 (495) 823-54-12
+          </a>
+        </div>
+
+        <a class="header__shopping-bags icon-shopping-bags" href="#"></a>
+      </div>
+
+      <div class="header__burger burger">
+        <span class="burger__line"></span>
+      </div>
+    </div>
+  </div>
+</header>
